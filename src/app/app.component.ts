@@ -8,17 +8,16 @@ import {Component} from '@angular/core';
 export class AppComponent {
   private displayParagraph: boolean;
   private clickCounter: number;
-  private clickArray: string[];
+  private clickDates: Date[];
 
   public constructor() {
     this.displayParagraph = false;
     this.clickCounter = 0;
-    this.clickArray = [];
+    this.clickDates = [];
   }
 
   public toggleParagraph(): void {
-    this.clickCounter++;
-    this.clickArray.push(this.clickCounter.toString());
+    this.clickDates.push(new Date());
     this.displayParagraph = !this.displayParagraph;
   }
 }

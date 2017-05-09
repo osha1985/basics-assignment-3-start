@@ -15,8 +15,8 @@
       <button class="btn btn-primary" (click)="toggleParagraph()">Display Details</button>
       <p *ngIf="displayParagraph">'Secret Password = tuna'</p>
       <ul>
-        <li *ngFor="let click of clickArray; let i = index" [ngStyle]="{backgroundColor:i < 4 ? 'white' : 'blue'}"
-            [ngClass]="{whiteColor:i >= 4}">Click {{click}}</li>
+        <li *ngFor="let clickDate of clickDates; let i = index" [ngStyle]="{backgroundColor:i < 4 ? 'white' : 'blue'}"
+            [ngClass]="{whiteColor:i >= 4}">{{clickDate}}</li>
       </ul>
     </div>
   </div>
