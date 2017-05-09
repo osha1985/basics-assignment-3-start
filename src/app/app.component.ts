@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  private displayParagraph: boolean;
+  private clickCounter: number;
+  private clickArray: string[];
+
+  public constructor() {
+    this.displayParagraph = false;
+    this.clickCounter = 0;
+    this.clickArray = [];
+  }
+
+  public toggleParagraph(): void {
+    this.clickCounter++;
+    this.clickArray.push(this.clickCounter.toString());
+    this.displayParagraph = !this.displayParagraph;
+  }
 }
